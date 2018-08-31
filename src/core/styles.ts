@@ -56,9 +56,9 @@ export function initStyleTemplate(domApi: d.DomApi, cmpMeta: d.ComponentMeta, en
           templateElm.innerHTML = `<style>${style}</style>`;
         }
 
-        // add our new template element to the head
+        // add our new template element to the head/body
         // so it can be cloned later
-        domApi.$appendChild(domApi.$doc.head, templateElm);
+        domApi.$appendChild(domApi.$doc.body, templateElm);
       }
     }
   }

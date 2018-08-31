@@ -26,7 +26,7 @@ export function init(
     x = doc.createElement('style');
     x.innerHTML = y.join() + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
     x.setAttribute('data-styles', '');
-    doc.head.insertBefore(x, doc.head.firstChild);
+    doc.head.appendChild(x);
   }
 
   createComponentOnReadyPrototype(win, namespace, HTMLElementPrototype);
@@ -75,7 +75,7 @@ export function init(
 
   x.setAttribute('data-resources-url', resourcesUrl);
   x.setAttribute('data-namespace', fsNamespace);
-  doc.head.appendChild(x);
+  doc.body.appendChild(x);
 }
 
 
