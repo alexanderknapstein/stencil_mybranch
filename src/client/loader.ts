@@ -26,6 +26,8 @@ export function init(
     x = doc.createElement('style');
     x.innerHTML = y.join() + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
     x.setAttribute('data-styles', '');
+    const meta = doc.head.getElementsByTagName('meta');
+    doc.head.insertBefore(x, meta[meta.length].nextSibling);
     doc.head.appendChild(x);
   }
 

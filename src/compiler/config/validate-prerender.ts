@@ -29,6 +29,8 @@ export function validatePrerender(config: d.Config, outputTarget: d.OutputTarget
     }
   }
 
+  console.log({defaults});
+
   setStringConfig(outputTarget, 'baseUrl', defaults.baseUrl);
   setBooleanConfig(outputTarget, 'canonicalLink', null, defaults.canonicalLink);
   setBooleanConfig(outputTarget, 'collapseWhitespace', null, defaults.collapseWhitespace);
